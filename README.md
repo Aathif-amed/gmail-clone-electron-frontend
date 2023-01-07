@@ -2,9 +2,9 @@
 
 Scripts :
 
-✅To build desktop app(exe application): npm run electron:build
+✅To build desktop app(exe application): npm run electron:build  (or) yarn electron:build
 
-✅To execute desktop app in test mode  : npm run electron:serve
+✅To execute desktop app in test mode  : npm run electron:serve  (or) yarn electron:serve
 
 ✅To build react app : npm run build
 
