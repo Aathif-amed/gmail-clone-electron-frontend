@@ -13,16 +13,16 @@
     "electron:start": "wait-on tcp:3000 && electron ."
   },
   "build" :{
-  " extends ":null,
-  "appld" :"com.example.electron-cra",
-  "files " :[
+  "extends":null,
+  "appId":"com.example.electron-cra",
+  "files" :[
     "dist/**/*",
     "build/**/*",
     "node_modules/**/*",
   "package.json"
   ],
-  "directories " :{
-  "buildResources": "assets"}},
+  "directories" :{
+  "buildResources":"assets"}},
   "author": "",
   "license": "ISC",
   "dependencies": {
