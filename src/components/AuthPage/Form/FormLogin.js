@@ -4,10 +4,6 @@ import { clearErrors } from '../../../redux/actions/clearErrors';
 import { useForm } from 'react-hook-form';
 import styles from './styles/Form.module.css';
 import { Button, CircularProgress } from '@material-ui/core';
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 8597893 (executable file and electron build command added)
 
 export default function FormLogin({ isLoading, error, user }) {
   const dispatch = useDispatch();
