@@ -1,14 +1,13 @@
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
-import styles from './styles/Header.module.css';
-import AccountControls from './AccountControls/AccountControls';
-import EditImageModal from './EditImageModal/EditImageModal';
-import GmailLogo from './images/gmail-logo.png';
-import { IconButton, Avatar } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import SearchIcon from '@material-ui/icons/Search';
-import AppsIcon from '@material-ui/icons/Apps';
-import NotificationsRoundedIcon from '@material-ui/icons/NotificationsRounded';
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import styles from "./styles/Header.module.css";
+import AccountControls from "./AccountControls/AccountControls";
+import EditImageModal from "./EditImageModal/EditImageModal";
+import { IconButton, Avatar } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
+import SearchIcon from "@material-ui/icons/Search";
+import AppsIcon from "@material-ui/icons/Apps";
+import NotificationsRoundedIcon from "@material-ui/icons/NotificationsRounded";
 
 export default function Header({ toggleShowSidebar }) {
   const { user } = useSelector((state) => state.userReducer);
@@ -25,17 +24,20 @@ export default function Header({ toggleShowSidebar }) {
         <IconButton onClick={toggleShowSidebar}>
           <MenuIcon />
         </IconButton>
-        <img src={GmailLogo} alt='gmail logo' />
+        <img
+          src="https://res.cloudinary.com/dgrkhvtdv/image/upload/v1676385553/ecom_imgs/gmail-logo_fke08f.png"
+          alt="gmail logo"
+        />
       </div>
 
       <div className={styles.middle}>
         <IconButton>
           <SearchIcon />
         </IconButton>
-        <input type='text' placeholder='Search mail' />
+        <input type="text" placeholder="Search mail" />
       </div>
 
-      <div className={styles.side + ' ' + styles.relative}>
+      <div className={styles.side + " " + styles.relative}>
         <IconButton>
           <AppsIcon />
         </IconButton>
@@ -53,7 +55,9 @@ export default function Header({ toggleShowSidebar }) {
             toggleShowEditImage={toggleShowEditImage}
           />
         )}
-        {showEditImage && <EditImageModal toggleShowEditImage={toggleShowEditImage} />}
+        {showEditImage && (
+          <EditImageModal toggleShowEditImage={toggleShowEditImage} />
+        )}
       </div>
     </header>
   );
